@@ -79,5 +79,8 @@ Maximum iteration of 100 was being set since this number of iterations is both t
 - [x] Training Accuracy: 0.64
 - [x] Testing Accuracy: 0.64
 
-## Result & Discussion
+## Closing Conclusion
+As a conclusion, violence against women is a social issue that can be reduced if sufficient prevention actions were being provided. Some data science approaches have been used in the crime investigation to forecast various crimes by discovering valuable patterns and have demonstrated higher accuracy than traditional crime prediction methods (Shah, Bhagat and Shah, 2021). However, the use of machine learning models in violence against women is less and not implemented in real life situation. As a result, in this study, I used machine learning models which includes random forest model, logistic regression model and artificial neural 
+network model to perform prediction of violence against women. When compared to the other models used for crime prediction that was being learned in the literature review section, the models performed not bad, with an accuracy of 68.68% from random forest model, 66.18%  from logistic regression and 65.34% from artificial neural network which ranks in the middle among all the cases studied. This project is intended to contribute to research and applications on violence against women, making violence prediction and prevention more accurate.
+
 
