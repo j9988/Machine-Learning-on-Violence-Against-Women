@@ -18,4 +18,8 @@ model training, and outcome evaluation and model deployment.</p>
 <p>Data is skewed in the box plot. The missing values need to be replaced using median instead of mean since the presence of numerous or a significant number of outlier data points indicates that the data is skewed in box plot. It is not advised to replace missing values with the mean in these circumstances since outlier data points will significantly affect the mean.</p>
 
 <h3>Feature Selection</h3>
+<p style="font-size:10">feature importance image to be include</p>
+
+<h3>Model Training</h3>
+<h4>Random Forest</h4>
 
