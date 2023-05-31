@@ -78,3 +78,6 @@ Maximum iteration of 100 was being set since this number of iterations is both t
 ##### 3.1 Prediction Result 
 - [x] Training Accuracy: 0.64
 - [x] Testing Accuracy: 0.64
+
+## Result & Discussion
+
