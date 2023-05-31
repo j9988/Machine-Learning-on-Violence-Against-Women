@@ -8,5 +8,14 @@ model training, and outcome evaluation and model deployment.</p>
 
 <h1>Data Acquisition</h1>
 <li> Demographic and Health Surveys (DHS) Program dataset contributed by Andrew Maranhão who is a Senior Data Scientist at Hospital Albert Einstein, Brazil. </li> 
+
   <h2>DHS Dataset</h2>
+  
   <h3>Issues in Dataset</h3>
+<li>Data Contains Missing Value</li>
+
+<h3>Data Cleansing</h3>
+<p>Data is skewed in the box plot. The missing values need to be replaced using median instead of mean since the presence of numerous or a significant number of outlier data points indicates that the data is skewed in box plot. It is not advised to replace missing values with the mean in these circumstances since outlier data points will significantly affect the mean.</p>
+
+<h3>Feature Selection</h3>
+
