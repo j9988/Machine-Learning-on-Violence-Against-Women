@@ -17,7 +17,7 @@ science algorithms have begun to be used in this field. To predict violence agai
 Data is skewed in the box plot. The missing values need to be replaced using **median** instead of mean since the presence of numerous or a significant number of outlier data points indicates that the data is skewed in box plot. It is not advised to replace missing values with the mean in these circumstances since outlier data points will significantly affect the mean.
 
 ### Feature Selection for DHS Dataset
-> feature importance image to be include
+> feature importancy graph to be include
 
 ### Model Training for DHS Dataset
 #### 1. Random Forest
@@ -26,20 +26,20 @@ The best accuracy obtained via tuning was **0.057** when the n_estimators were s
 ##### 1.2 Model Training
 During the literature review step, 75% of the dataset was used as the training set and 25% as the testing set, which was shown to be the optimal combination. The random forest tuning in the previous section was used to obtain the n_estimators, max_features, and max_depth.
 ##### 1.3 Prediction Result 
-- [x] training accuracy: 0.06095
-- [x] testing accuracy: 0.05368
+- [x] Training Accuracy: 0.06095
+- [x] Testing Accuracy: 0.05368
 
 #### 2. Artificial Neural Network 
 Neural networks with two hidden layers, can represent functions of any shape (Heaton, 2008). Thus, two hidden layers were being employed in this model. Whereas for the number of units, there were three rules to be followed. In practise, the researcher recommends experimenting with smaller batch sizes first (typically 32 or 64). To fully utilise the GPU's processing, the range of batch sizes should be a power of two (Kandel and Castelli, 2020). Thus, the batch size being used to train this model is 32. 
 ##### 2.1 Prediction Result 
-- [x] training accuracy: 0.0051
-- [x] testing accuracy: 0.0063
+- [x] Training Accuracy: 0.0051
+- [x] Testing Accuracy: 0.0063
 
 #### 3. Logistic Regression
 As seen in the feature selection section, the number of iterations used to execute model training for the NCVS dataset has no effect on prediction accuracy. As a result, a maximum iteration of 10000 was set.
 ##### 3.1 Prediction Result 
-- [x] training accuracy: 0.066
-- [x] testing accuracy: 0.055
+- [x] Training Accuracy: 0.066
+- [x] Testing Accuracy: 0.055
 
 ### Conclusion on Model Training for DHS Dataset
 The target value was in percentage which means while using the models to predict data, a result of low accuracy will be found as there is too many target value. 
@@ -51,5 +51,30 @@ For complex sampling like this dataset, likelihood ratio tests were used to conf
 violence against women, followed by the widowed, divorced, separated and lastly the married or living together category. The coefficient estimate also shows that the women who lives in rural area does have higher probability to experience violence compared to the women who lives in the urban area.
 
 ## NCVS Dataset
+### Data Cleansing for NCVS Dataset
+Since this project did not aim to study the type of crime experienced by women, thus, the experience of violence against women was being transformed into 0 or 1 and saved into the VAW feature column. The women that experienced in being a victim of violence was being labelled as 1 in the VAW feature, whereas 0 was labelled if the women do not experience any violence. Therefore, the NULL value in the “newoff” feature does not affect the model training process. To cleanse the dataset that was going to be used for the model training, the “newoff” feature was being removed after adding in the VAW feature column.
 
+### Feature Selection for NCVS Dataset
+> feature importancy graph to be include
 
+### Model Training for NCVS Dataset
+#### 1. Random Forest
+##### 1.1 Tuning
+The highest accuracy retrieved from the tuning was 0.687 by setting the n_estimators to 200, max_features to sqrt and max_depth to None. By replacing the max_features to log2 and remaining the other attributes the same, the result was 0.687 too. Thus, since both shown the same highest result, the n_estimators to 200, max_features to sqrt and max_depth to None settings was being used. 
+##### 1.2 Model Training
+During the literature review step, 75% of the dataset was used as the training set and 25% as the testing set, which was shown to be the optimal combination. The random forest tuning in the previous section was used to obtain the n_estimators, max_features, and max_depth.
+##### 1.3 Prediction Result 
+- [x] Training Accuracy: 0.78
+- [x] Testing Accuracy: 0.68
+
+#### 2. Artificial Neural Network
+Similar to the ANN model used for the DHS dataset, the ANN model used to train NCVS dataset also consists of two hidden layers and use 32 as batch size. 
+##### 2.1 Prediction Result 
+- [x] Training Accuracy: 0.64
+- [x] Testing Accuracy: 0.65
+
+#### 3. Logistic Regression
+Maximum iteration of 100 was being set since this number of iterations is both the stable value and the is able to produce the highest accuracy. 
+##### 3.1 Prediction Result 
+- [x] Training Accuracy: 0.64
+- [x] Testing Accuracy: 0.64
